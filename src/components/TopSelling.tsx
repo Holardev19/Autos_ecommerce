@@ -60,7 +60,8 @@ export const SelectedProduct: React.FC<SelectedProductProps> = ({
 	const containerRef = useRef<HTMLDivElement>(null);
 
 	const handleAddToCart = (product: ProdFeats) => {
-		addToCart(product);
+		const cartItem = { ...product, id: product.id.toString() }; // Convert id to string
+		addToCart(cartItem);
 	};
 
 	const scrollLeft = () => {
