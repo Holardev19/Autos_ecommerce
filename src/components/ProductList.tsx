@@ -17,7 +17,9 @@ const ProductList: React.FC<ProductListProps> = ({ selectedCategory }) => {
 	const [hasDiscount, setHasDiscount] = useState(true);
 
 	const handleAddToCart = (product: ProdFeats) => {
-		addToCart(product);
+		const cartItem = { ...product, id: product.id.toString() };
+
+		addToCart(cartItem);
 	};
 
 	const isInCart = (productId: string) => {
