@@ -123,7 +123,7 @@ const ProductList: React.FC<ProductListProps> = ({ selectedCategory }) => {
 							onClick={() => handleAddToCart(product)}
 							className="flex w-36 h-10 px-6 justify-center items-center gap-2 self-stretch rounded-[100px] bg-[#17af26] mx-auto">
 							<p className="text-[#fff] font-lexend text-xs font-medium leading-5">
-								{isInCart(product.id)
+								{isInCart(product.id.toString())
 									? "Added to Cart"
 									: "Add to cart"}
 							</p>
